@@ -1,0 +1,9 @@
+# NTP Servers to use for ntpdate
+NTPSERVERS="0.nz.pool.ntp.org"
+
+# Get initial time via ntpdate?
+NTPDATE=no
+NTPDATE_OPTS="-t 2 -p 1"
+
+# Start the ntp daemon?
+NTPD=yes
