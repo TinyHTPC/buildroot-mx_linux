@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Tiny UI</title>
+
+<link rel="shortcut icon" href="images/tinyicon.ico" />
+
+<script src="SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<script>
+    function replaceSrc()
+    {
+        var Host = window.location.hostname;
+        document.getElementsByTagName("iframe")[0].src = "http://"+Host+":7000";  
+    }
+
+        window.onload = function()
+    {
+         replaceSrc();
+    }
+
+</script>
+
+
+
+ <!--
+#################################################################
+#                                                               #
+#		                   Web Remote                           #
+#                                                               #
+#################################################################
+
+-->
+<link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.1.0.min.js"></script>
+<script type="text/javascript" src="js/pimaxplus.xbmc.min.js"></script>
+		<style type="text/css">
+            div#remote { margin-bottom:20px; margin-top:0px; }
+			.remotespacer { height: 15px; }
+			.remotevolumediv { width: 225px; margin: 15px auto 0 auto; padding: 0 15px; }
+			.smallfont { font-size: 12px; }
+			.smallerfont { font-size: 10px; }
+			.ui-icon-previous { background-image: url("images/previous.png"); }
+			.ui-icon-next { background-image: url("images/next.png"); }
+			.ui-icon-rewind { background-image: url("images/rewind.png"); }
+			.ui-icon-fastforward { background-image: url("images/forward.png"); }
+			.ui-icon-playpause { background-image: url("images/playpause.png"); }
+			.ui-icon-stop { background-image: url("images/stop.png"); }
+			.ui-icon-volup { background-image: url("images/volup.png"); }
+			.ui-icon-voldown { background-image: url("images/voldown.png"); }
+			.ui-icon-mute { background-image: url("images/mute.png"); }
+			.ui-icon-none { background: none; }
+			div.ui-slider { width: 100%; margin: 0;}
+			div.ui-slider .ui-btn-inner { background: url("images/volume.png") no-repeat 2px 1px;  padding: 0; }
+			* [data-role="footer"] { padding-left: 5px; }
+			* [data-role="footer"] .ui-btn-icon-notext { width: auto; padding: 12px; margin: 0 -8px 0 0; }
+			#remote [data-role="content"] .ui-btn-icon-notext { width: auto; padding: 25px !important; border-radius: 2px; }
+			#remote [data-role="content"] .ui-controlgroup { width: 225px; margin: 0 auto; }
+			p[data-current-media="title"], p[data-current-media="artist"], p[data-current-media="player-time"] { font-weight: bold; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+		</style>
+
+</head>
+
+<body bgcolor="#262626">
+
+
+<div id="xbmc" >
+    <a href="/"><img src="./images/xbmc-logo.png" /></a>
+</div>
+<!--
+<div id="fsremote" >
+    <a class="buttons" href="remote/index.html">Full Screen Remote</a>
+</div>
+-->
+<div id="remote" >
+    <div class="remotevolumediv">
+    	<label for="volumeslider" class="ui-hidden-accessible">Volume:</label>
+    	<input type="range" name="volumeslider" style="display: none;" id="volumeslider" value="100" min="0" max="100" data-highlight="true" />
+    </div>
+    <div class="remotespacer"></div>
+    <div class="remotespacer"></div>
+    <div class="remotespacer"></div>
+    <div data-role="controlgroup" data-type="horizontal">
+    	<a href="#" data-remote-action="Input.Back" data-remote-params="" data-role="button" data-icon="back" data-iconpos="notext">Back</a>
+    	<a href="#" data-role="button" data-icon="none" data-iconpos="notext" class="ui-disabled"></a>
+    	<a href="#" data-remote-action="Input.Home" data-remote-params="" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
+    </div>
+    <div class="remotespacer"></div>
+    <div data-role="controlgroup" data-type="horizontal">
+    	<a href="#" data-role="button" data-icon="none" data-iconpos="notext" class="ui-disabled"></a>
+    	<a href="#" data-remote-action="Input.Up" data-remote-params="" data-role="button" data-icon="arrow-u" data-iconpos="notext">Up</a>
+    	<a href="#" data-role="button" data-icon="none" data-iconpos="notext" class="ui-disabled"></a>
+    </div>
+    <div data-role="controlgroup" data-type="horizontal">
+    	<a href="#" data-remote-action="Input.Left" data-remote-params="" data-role="button" data-icon="arrow-l" data-iconpos="notext">Left</a>
+    	<a href="#" data-remote-action="Input.Select" data-remote-params="" data-role="button" data-icon="grid" data-iconpos="notext">Okay</a>
+    	<a href="#" data-remote-action="Input.Right" data-remote-params="" data-role="button" data-icon="arrow-r" data-iconpos="notext">Right</a>
+    </div>
+    <div data-role="controlgroup" data-type="horizontal">
+    	<a href="#" data-role="button" data-icon="none" data-iconpos="notext" class="ui-disabled"></a>
+    	<a href="#" data-remote-action="Input.Down" data-remote-params="" data-role="button" data-icon="arrow-d" data-iconpos="notext">Down</a>
+    	<a href="#" data-role="button" data-icon="none" data-iconpos="notext" class="ui-disabled"></a>
+    </div>
+    <div data-role="controlgroup" data-type="horizontal">					
+    	<a href="#" data-remote-action="Player.GoPrevious" data-remote-params="player" data-role="button" data-icon="previous" data-iconpos="notext">Previous</a>
+    	<a href="#" data-remote-action="Player.Stop" data-remote-params="player" data-role="button" data-icon="stop" data-iconpos="notext">Stop</a>
+    	<a href="#" data-remote-action="Player.GoNext" data-remote-params="player" data-role="button" data-icon="next" data-iconpos="notext">Next</a>
+    </div>
+    <div data-role="controlgroup" data-type="horizontal">
+    	<a href="#" data-remote-action="Player.SetSpeed" data-remote-params="'speed': 'decrement'" data-role="button" data-icon="rewind" data-iconpos="notext">Rewind</a>
+    	<a href="#" data-remote-action="Player.PlayPause" data-remote-params="player" data-role="button" data-icon="playpause" data-iconpos="notext">Play/Pause</a>
+    	<a href="#" data-remote-action="Player.SetSpeed" data-remote-params="'speed': 'increment'" data-role="button" data-icon="fastforward" data-iconpos="notext">Forward</a>
+    </div>
+</div>
+
+<div id="foot" >
+    <a href="http://tinyhtpc.co.nz" class="img"><img src="./images/tinyUI.png" /></a>
+    <a href="http://tinyhtpc.co.nz" class="add">Tiny Home Theater PC's</a>
+</div>
+
+ <!--
+################################################################################### 
+#		This section is the top Navigation Bar
+#		
+#		Hopefully this is self explanatory. Replace all my  
+#		links to customize for your own needs. Use my example
+#		for drop down items. 
+#		
+#       I have used images instead of words for some of my menus. I   
+#		have included PSD files in /images/ folder so you can modify
+#		and create your own images. I found this we site helpful to get logos:
+#       http://userlogos.org/logos
+#
+#		For Sab, Sickbeard, Maraschino, and Couchpotato	put your own IP
+#		addresses in the first set of <li> tags below.
+#
+#
+#
+#####################################################################################
+ -->
+<!--    
+<script type="text/javascript">
+var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+</script>
+
+<div id="navi" class="navi">	
+		<ul >
+			<li ><a href="http://tiny:7000/#" title="" target="myiframe">Home</a></li>
+
+            <li><a href="http://192.168.0.201:88/#/dv1/" title="" target="myiframe">sabNZBD+</a></li> 
+			<li><a href="http://192.168.0.201:8081/" title="" target="myiframe">Sickbeard</a></li> 
+			<li><a href="http://192.168.0.201:5000/movie/" title="" target="myiframe">Couchpotato</a></li> 
+			<li><a href="http://192.168.0.201:8092/" title="" target="myiframe">Headphones</a></li> 
+            
+            <li><a href="" target="myiframe">Tools &amp; Settings</a></li> 
+		</ul>	
+	</div>
+-->
+
+ <!--
+################################################################################### 
+#		This section is the Main Screen!
+#		
+#		Change the IP to be the IP of your Maraschino. This way it will  
+#		open to the Maaraschino page by default. All links above open in this iframe.
+#		 
+#####################################################################################
+ -->
+
+<div id="version">Version: 0.1.5</div>
+
+<iframe id="ifrm" name="myiframe" src="">
+
+
+</body>
+</html>

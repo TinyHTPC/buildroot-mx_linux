@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="webinterface.tiny"
+  version="0.1.5"
+  name="TinyUI"
+  provider-name="TinyHTPC.co.nz">
+  <requires>
+    <import addon="xbmc.gui" version="4.0.0"/>
+    <import addon="service.web.maraschino" version="3.1.0"/>
+    <import addon="script.module.simplejson" version="2.0.10" optional="true"/>
+  </requires>
+  <extension
+    point="xbmc.gui.webinterface"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">TinyUI - Webinterface desigen for integration between XBMC and Maraschino</summary>
+    <description lang="en">This interface is designed to be installed along side Maraschino.
+      Once installed, you can use this webinterface to control the Audio/Video-Section of XBMC: play/pause/stop/skip, show artists/albums/movies/tv shows and play them or add them to the playlist. It's designed for use on PCs or laptops with a browser like FireFox which supports JavaScript.
+
+Minimum requirements: XBMC 10.0-beta3 (tested on Ubuntu Karmic Koala)
+Tested Browsers:
+   - FireFox 27.0.1 (on Windows 7)
+   - Opera 10.62 (on Ubuntu Lucid Lynx and Windows XP)
+   - Safari 5.02 (on Windows XP)
+   - Internet Explorer 8 (does not support round edges)
+Not supported: Internet Explorer 6 or 7
+
+Hint: You may need to clear your browser-cache before you open the new installed/updated webinterface in your browser.</description>
+    <platform>all</platform>
+  </extension>
+</addon>

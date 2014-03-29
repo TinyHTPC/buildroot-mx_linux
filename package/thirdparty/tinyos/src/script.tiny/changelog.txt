@@ -1,0 +1,14 @@
+v1.0.3
+  - Added Reboot Recovery From Addon Settings
+  - Added Factory Reset From Addon Settings
+
+v1.0.2
+  - Added Read Version Number From OTA_Version
+  - Added Show Version Number In Addon Settings
+
+v1.0.1:
+  - Removed USB drive requirement
+  - Updated skin files and icon
+
+v1.0.0:
+  - initial release

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.tiny" name="TinyHTPC Update Service" version="1.0.3" provider-name="TinyHTPC">
+  <requires>
+    <import addon="xbmc.python" version="2.0"/>
+  </requires>
+  <extension point="xbmc.service" library="service.py" start="startup" />
+  <extension point="xbmc.python.script" library="default.py" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">TinyHTPC Update Service</summary>
+    <description lang="en">TinyHTPC Update Service</description>
+     <platform>all</platform>
+  </extension>
+</addon>

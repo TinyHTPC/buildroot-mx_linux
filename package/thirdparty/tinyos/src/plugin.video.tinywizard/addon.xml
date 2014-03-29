@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.tinywizard" name="Tiny Quick Install Wizard" version="1.0.1" provider-name="J1nx">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Tiny Wizard</summary>
+    <description lang="en">Easy region based install wizard, based on J1nx's TLBB Wizard</description>
+    <platform>all</platform>
+  </extension>
+</addon>

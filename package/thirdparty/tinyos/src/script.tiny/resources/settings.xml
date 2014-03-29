@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<settings>
+	<category label="">
+             <setting label="Current Version"    id="cVersion" type="text" default="0.1.0" visible="true" />
+             <setting label="Downloaded Version" id="dVersion" type="text" default="0.0.0" visible="false" />
+
+             <setting label="101" id="autoUpdate" type="bool" default="false"/>
+             <setting label="102" type="action" option="close" action="RunScript($CWD/update.py,0)" />
+             <setting label="105" type="action" option="close" action="RunScript($CWD/update.py,4)" />
+             <setting label="103" type="action" option="close" action="RunScript($CWD/update.py,2)" />
+             <setting label="104" type="action" option="close" action="RunScript($CWD/update.py,3)" />
+	</category>
+</settings>

@@ -1,0 +1,5 @@
+v1.0.1
+Updated based on the latest 1.0.4 Hub wizard.
+
+v1.0
+Initial Release
