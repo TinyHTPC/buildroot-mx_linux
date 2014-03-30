@@ -5,7 +5,7 @@
 ###############################################################################
 TINYOS_VERSION = 0.0.1
 TINYOS_SOURCE=tinyos-$(TINYOS_VERSION).tar.gz
-TINYOS_SITE = ./package/thirdparty/xbmcaddons/tinyos/src
+TINYOS_SITE = ./package/thirdparty/tinyos/src
 TINYOS_SITE_METHOD = local
 TINYOS_INSTALL_STAGING = NO
 TINYOS_INSTALL_TARGET = YES
