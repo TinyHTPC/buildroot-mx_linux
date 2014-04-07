@@ -46,7 +46,7 @@
 				<aligny>center</aligny>
 				<scroll>true</scroll>
 				<scrollspeed>20</scrollspeed>
-			  <label>$ADDON[script.tlbb 1]</label>
+			  <label>$ADDON[script.tiny 1]</label>
 			</control>
 		 <control type="group">
 			<posx>540</posx>
@@ -98,7 +98,7 @@
 				<aligny>center</aligny>
 				<scroll>true</scroll>
 				<scrollspeed>20</scrollspeed>
-				<label>$ADDON[script.tlbb 25]</label>
+				<label>$ADDON[script.tiny 25]</label>
 			</control>
 			<control type="label">
 				<posx>0</posx>
@@ -113,7 +113,7 @@
 				<aligny>center</aligny>
 				<scroll>true</scroll>
 				<scrollspeed>20</scrollspeed>
-				<label>$ADDON[script.tlbb 26]</label>
+				<label>$ADDON[script.tiny 26]</label>
 			</control>
 		 </control>
 	  </control>

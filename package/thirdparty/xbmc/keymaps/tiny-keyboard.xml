@@ -36,6 +36,16 @@
 <!--   Coming soon.                                                                           -->
 <keymap>
   <global>
+    <mouse>
+      <leftclick>Select</leftclick>
+      <middleclick>middleclick</middleclick>
+      <rightclick>Back</rightclick>
+      <doubleclick>noop</doubleclick>
+      <wheeldown>noop</wheeldown>
+      <wheelup>noop</wheelup>
+      <mousedrag>noop</mousedrag>
+      <mousemove>noop</mousemove>
+    </mouse>
     <keyboard>
       <p>Play</p>
       <q>Queue</q>
@@ -94,6 +104,7 @@
       <numpadnine>Number9</numpadnine>
       <backslash>ToggleFullScreen</backslash>
       <home>FirstPage</home>
+      <homepage>FirstPage</homepage>
       <end>LastPage</end>
       <power>ActivateWindow(shutdownmenu)</power>
       <sleep>ActivateWindow(shutdownmenu)</sleep>
@@ -152,17 +163,12 @@
       <!-- MCE keypresses without an obvious use in XBMC -->
       <u mod="ctrl">Notification(MCEKeypress, DVD subtitle, 3)</u>
       <a mod="ctrl,shift">Notification(MCEKeypress, DVD audio, 3)</a>
+      <red>Close</red>  						<!-- Button 41 : red -->
+      <green>Close</green>						<!-- Button 42 : green -->
+      <yellow>Close</yellow>						<!-- Button 43 : yellow -->
+      <blue>FullScreen</blue>						<!-- Button 44 : blue -->
+      <KEY_GREEN>Back</KEY_GREEN>
     </keyboard>
-    <mouse>
-      <mousemove>Noop</mousemove>
-      <leftclick>Select</leftclick>
-      <rightclick>Back</rightclick>
-      <middleclick>Noop</middleclick>
-      <doubleclick>Noop</doubleclick>
-      <wheeldown>Noop</wheeldown>
-      <wheelup>Noop</wheelup>
-      <mousedrag>Noop</mousedrag>
-    </mouse>
   </global>
   <LoginScreen>
     <keyboard>

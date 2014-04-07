@@ -35,7 +35,7 @@ def checkForUpdate(silent = 1):
         
     if silent == '4':
         try:
-            url      = 'http://tinyhtpc.co.nz/downloads/itv05_list.php'
+            url      = 'http://tinyhtpc.co.nz/downloads/itv05-list.php'
             response = urllib2.urlopen(url).read()
         except:
             return []
@@ -91,7 +91,7 @@ def setAlarm(mins):
 
 def getResponse():
     try:
-        url      = 'http://tinyhtpc.co.nz/downloads/itv05_update.php'
+        url      = 'http://tinyhtpc.co.nz/downloads/itv05-latest.php'
         response = urllib2.urlopen(url).read()
     except:
         return []

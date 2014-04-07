@@ -2,6 +2,12 @@
     <lookandfeel>
         <enablerssfeeds>false</enablerssfeeds>
     </lookandfeel>
+    <locale>
+        <language>English</language>
+        <subtitlelanguage>original</subtitlelanguage>
+        <timezone>Pacific/Auckland</timezone>
+        <timezonecountry>New Zealand</timezonecountry>
+    </locale>
     <audiooutput>
         <guisoundmode>0</guisoundmode>
         <ac3passthrough>false</ac3passthrough>
@@ -57,7 +63,7 @@
         <useairplaypassword>false</useairplaypassword>
         <webserver>true</webserver>
         <webserverpassword></webserverpassword>
-        <webserverport>8080</webserverport>
+        <webserverport>80</webserverport>
         <webserverusername></webserverusername>
         <webskin>webinterface.tiny</webskin>
         <zeroconf>true</zeroconf>
