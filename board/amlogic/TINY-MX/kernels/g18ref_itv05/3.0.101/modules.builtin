@@ -88,7 +88,6 @@ kernel/drivers/amlogic/ppmgr/ppmgr_3d_tv.ko
 kernel/drivers/amlogic/spi_nor/spi_nor.ko
 kernel/drivers/amlogic/spi_nor/apollo_spi_nor.ko
 kernel/drivers/amlogic/usb/dwc_otg/294/dwc_otg.ko
-kernel/drivers/amlogic/wifi/rtl8xxx_CU/8192cu.ko
 kernel/drivers/base/firmware_class.ko
 kernel/drivers/block/loop.ko
 kernel/drivers/bluetooth/hci_vhci.ko

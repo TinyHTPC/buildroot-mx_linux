@@ -102,5 +102,7 @@ kernel/drivers/media/dvb/frontends/mb86a20s.ko:
 kernel/drivers/media/dvb/frontends/ix2505v.ko:
 kernel/drivers/media/dvb/frontends/stv0367.ko:
 kernel/drivers/media/dvb/frontends/cxd2820r.ko:
+kernel/drivers/amlogic/wifi/rtl8xxx_CU/8192cu.ko:
+kernel/drivers/amlogic/wifi/rtl8xxx_EU/8188eu.ko:
 kernel/drivers/amlogic/ump/ump.ko:
 kernel/drivers/amlogic/mali/mali.ko: kernel/drivers/amlogic/ump/ump.ko

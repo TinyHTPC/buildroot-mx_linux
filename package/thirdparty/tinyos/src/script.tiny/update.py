@@ -240,7 +240,7 @@ def reboot():
     utils.setSetting('cVersion', version)
     utils.setSetting('dVersion', '0.0.0')
 
-    cmd = 'recoveryflash'
+    cmd = 'recoveryflash'+path
 
     utils.reboot(cmd)
 
