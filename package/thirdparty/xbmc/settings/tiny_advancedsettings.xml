@@ -22,8 +22,11 @@
     <subsdelayrange>30</subsdelayrange>
     <audiodelayrange>30</audiodelayrange>
   </video>
+  <pvr>
+    <minvideocachelevel>50</minvideocachelevel>
+    <minaudiocachelevel>50</minaudiocachelevel>
+  </pvr>
   <hidesettings>
-    <setting>lookandfeel.soundskin</setting>
     <setting>videoplayer.rendermethod</setting>
     <setting>videoplayer.adjustrefreshrate</setting>
     <setting>videoplayer.pauseafterrefreshchange</setting>
@@ -33,6 +36,7 @@
     <setting>videoscreen.vsync</setting>
     <setting>videoscreen.testpattern</setting>
     <setting>videoscreen.haslcd</setting>
+    <!-- <setting>videoscreen.screen</setting> -->
     <setting>audiooutput.mode</setting>
     <setting>audiooutput.channellayout</setting>
     <setting>audiooutput.audiodevice</setting>
