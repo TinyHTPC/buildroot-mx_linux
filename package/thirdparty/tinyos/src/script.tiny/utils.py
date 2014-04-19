@@ -24,7 +24,11 @@ import os
 
 ID    = 'script.tiny'
 ADDON = xbmcaddon.Addon(ID)
-
+PATCHID = 'os.linux.tiny'
+PATCH = xbmcaddon.Addon(PATCHID)
+#OTAPATH  = xbmc.translatePath( "special://profile/addon_data/%s/" PATCH )
+#OTA  = OTAPATH+ota_version
+PATCHVERSION = PATCH.getAddonInfo( "version" )
 
 def log(text):
     #xbmc.log("[TinyHTPC] : %s" % str(text), xbmc.LOGDEBUG)
@@ -87,7 +91,8 @@ def setSetting(setting, value):
 
 
 def saveOta():
-    f = open('/usr/share/xbmc/system/ota_version').read()
+    #f = open(OTA).read()
+    f = PATCHVERSION
     xbmcaddon.Addon(id = ID).setSetting('cVersion', f)
 
 

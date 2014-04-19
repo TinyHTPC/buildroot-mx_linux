@@ -1,14 +1,12 @@
 v1.0.3
-  - Added Reboot Recovery From Addon Settings
-  - Added Factory Reset From Addon Settings
+  - Added: XBMC Backup capibility thanks to robweber's "XBMC Backup" Add-on
+  - Added: Initial Settings to begin replacing First-Run Wizzard.
 
 v1.0.2
-  - Added Read Version Number From OTA_Version
-  - Added Show Version Number In Addon Settings
+  - Updated: Read OTA version from os.linux.tiny addon
 
 v1.0.1:
-  - Removed USB drive requirement
-  - Updated skin files and icon
+  - Updated: skin files and icon
 
 v1.0.0:
-  - initial release
+  - initial: release ported from tlbb update service.

@@ -1,5 +1,5 @@
 v1.0.1
-Updated based on the latest 1.0.4 Hub wizard.
+Updated sources to TinyHTPC.
 
 v1.0
-Initial Release
+Initial Release ported from TLBB regin installer

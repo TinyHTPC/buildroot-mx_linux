@@ -1,5 +1,5 @@
 import xbmc,xbmcgui
-from xbianconfig import xbianConfig
+#from xbianconfig import xbianConfig
 import time
 import threading
 import os

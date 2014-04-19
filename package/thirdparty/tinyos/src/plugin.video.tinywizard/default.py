@@ -7,13 +7,13 @@ import downloader
 import time
 
 USER_AGENT = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3'
-base='http://tinyhtpc.co.nz/downloads/wizard_packs/'
-ADDON=xbmcaddon.Addon(id='plugin.video.tlbbwizard')
+base='https://github.com/TinyHTPC/xbmc-packs/raw/master/'
+ADDON=xbmcaddon.Addon(id='plugin.video.tinywizard')
 VERSION = "1.0.1"
-PATH = "TLBB Wizard"            
+PATH = "TINY Wizard"            
     
 def CATEGORIES():
-    link = OPEN_URL('http://tinyhtpc.co.nz/downloads/wizard_packs/wizard.txt').replace('\n','').replace('\r','')
+    link = OPEN_URL('https://github.com/TinyHTPC/xbmc-packs/raw/master/packs.txt').replace('\n','').replace('\r','')
     match = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(link)
     for name,url,iconimage,fanart,description in match:
         addDir(name,url,1,iconimage,fanart,description)
@@ -32,7 +32,7 @@ def wizard(name,url,description):
     path = xbmc.translatePath(os.path.join('special://home/addons','packages'))
     addonfolder = xbmc.translatePath(os.path.join('special://','home'))
     dp = xbmcgui.DialogProgress()
-    dp.create("Tiny Home Theatre Wizard","Downloading ",'', 'Please Wait')
+    dp.create("Add-On Pack Installer","Downloading ",'', 'Please Wait')
     lib=os.path.join(path, name+'.zip')
     try:
        os.remove(lib)
@@ -43,7 +43,7 @@ def wizard(name,url,description):
     dp.update(0,"", "Extracting Zip Please Wait")
     xbmc.executebuiltin("XBMC.Extract(%s,%s)" %(lib,addonfolder))
     dialog = xbmcgui.Dialog()
-    dialog.ok("Tiny Home Theatre Wizard", "All Done Tiny Home Theatre Will Now Load Content")
+    dialog.ok("Add-On Pack Installer", "All Done. Click 'OK' to load your new content.")
     xbmc.executebuiltin("LoadProfile(Master user)")
 
 def addDir(name,url,mode,iconimage,fanart,description):

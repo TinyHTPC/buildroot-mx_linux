@@ -25,6 +25,7 @@ import urllib
 import json
 import time
 import utils
+import shutil
 
 
 def checkForUpdate(silent = 1):
@@ -240,7 +241,7 @@ def reboot():
     utils.setSetting('cVersion', version)
     utils.setSetting('dVersion', '0.0.0')
 
-    cmd = 'recoveryflash'+path
+    cmd = 'recoveryflash /recovery/update.zip'
 
     utils.reboot(cmd)
 

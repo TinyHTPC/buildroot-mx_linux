@@ -19,6 +19,7 @@
 
 import utils
 import update
+import xbmc
 
 utils.log("Update Service Starting")
 
@@ -27,5 +28,10 @@ try:
     update.checkForUpdate(silent = 1)
 
 except Exception, e:
-    utils.log('Error in TinyHTPC Service')
+    utils.log('Error in TinyHTPC Update Service')
     utils.log(e)
+
+#Execute Backup scheduler
+print "Starting Backup scheduler..."
+xbmc.executebuiltin('RunScript(special://home/addons/script.tiny/services/scheduler.py)')
+
