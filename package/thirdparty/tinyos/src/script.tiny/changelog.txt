@@ -1,3 +1,6 @@
+v1.0.4
+  - Revert back to old OTA Version.
+
 v1.0.3
   - Added: XBMC Backup capibility thanks to robweber's "XBMC Backup" Add-on
   - Added: Initial Settings to begin replacing First-Run Wizzard.

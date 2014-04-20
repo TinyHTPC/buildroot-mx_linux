@@ -31,7 +31,3 @@ except Exception, e:
     utils.log('Error in TinyHTPC Update Service')
     utils.log(e)
 
-#Execute Backup scheduler
-print "Starting Backup scheduler..."
-xbmc.executebuiltin('RunScript(special://home/addons/script.tiny/services/scheduler.py)')
-

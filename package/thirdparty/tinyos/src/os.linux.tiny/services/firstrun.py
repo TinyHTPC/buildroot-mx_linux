@@ -17,6 +17,13 @@ FILES = xbmc.translatePath( ADDON_DIR + "/resources/files/" )
 DEST = xbmc.translatePath( "special://home/" )
 src=None
 
+def ensure_dir(f):
+    print "Checking for location: "+f
+    d = os.path.dirname(f)
+    if not os.path.exists(d):
+        os.makedirs(d)
+	print "Not Found! Creating: "+d
+
 def INSTALL():
         dialog = xbmcgui.Dialog()      
         dp = xbmcgui.DialogProgress()
@@ -34,6 +41,17 @@ def INSTALL():
         
         dp.update(0,"", "Extracting Zip... Please Wait")
         extract.all(lib,addonfolder,dp)
+        
+        #Setup Home dir 
+        ensure_dir("/root/Downloads/complete/*")
+        ensure_dir("/root/Downloads/incoming/*")
+        ensure_dir("/root/Downloads/scripts/*")
+        ensure_dir("/root/Downloads/torrents/*")
+        ensure_dir("/root/XBMCBackups/*")
+        
+        #Link to External Media 
+        subprocess.check_output(ln, shell=True)
+        
         #xbmc.executebuiltin('UpdateLocalAddons')
         #xbmc.executebuiltin( 'UpdateAddonRepos' )
         #dialog.ok("TinyOS add-on Installer", "All Done","", "[COLOR yellow]Brought To You By TinyHTPC[/COLOR]")
