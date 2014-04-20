@@ -50,6 +50,7 @@ def INSTALL():
         ensure_dir("/root/XBMCBackups/*")
         
         #Link to External Media 
+        ln = "ln -s /media/ /root/ExternalDevices"
         subprocess.check_output(ln, shell=True)
         
         #xbmc.executebuiltin('UpdateLocalAddons')
