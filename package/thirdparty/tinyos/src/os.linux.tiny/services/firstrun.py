@@ -6,6 +6,9 @@ from resources.lib.utils import *
 import os
 import shutil
 import resources.lib.extract as extract
+import subprocess
+import sys
+import time
 
 __addonID__ = "os.linux.tiny"
 ADDON     = Addon( __addonID__ )
@@ -27,7 +30,7 @@ def ensure_dir(f):
 def INSTALL():
         dialog = xbmcgui.Dialog()      
         dp = xbmcgui.DialogProgress()
-        dp.create("Patching TinyHTPC","Downloading ",'', 'Please Wait')
+        dp.create("Patching TinyHTPC","Installing ",'', 'Please Wait')
         
         #use variable to change keyword for future updates 
         keyword      =  'update-1.0.0'
@@ -42,6 +45,7 @@ def INSTALL():
         dp.update(0,"", "Extracting Zip... Please Wait")
         extract.all(lib,addonfolder,dp)
         
+        dp.update(70,"", "Setting up folders... Please Wait")
         #Setup Home dir 
         ensure_dir("/root/Downloads/complete/*")
         ensure_dir("/root/Downloads/incoming/*")
@@ -57,6 +61,8 @@ def INSTALL():
         #xbmc.executebuiltin( 'UpdateAddonRepos' )
         #dialog.ok("TinyOS add-on Installer", "All Done","", "[COLOR yellow]Brought To You By TinyHTPC[/COLOR]")
         dp.update(100,"", "Reloading XBMC")
+	time.sleep(3)
+        
         #dialog.ok("TinyOS", "Reloading XBMC","", "[COLOR yellow]Brought To You By TinyHTPC[/COLOR]")
 	#Restart XBMC
 	xbmc.executebuiltin('RestartApp')

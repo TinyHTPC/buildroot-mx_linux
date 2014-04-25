@@ -7,7 +7,7 @@ import downloader
 import time
 
 USER_AGENT = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3'
-base='https://github.com/TinyHTPC/xbmc-packs/raw/master/'
+base='https://raw.githubusercontent.com/TinyHTPC/xbmc-packs/master/packs/'
 ADDON=xbmcaddon.Addon(id='plugin.video.tinywizard')
 VERSION = "1.0.1"
 PATH = "TINY Wizard"            

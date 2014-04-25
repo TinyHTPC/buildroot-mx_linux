@@ -1,3 +1,6 @@
+[B]Version 1.0.3[/B]
+Added: Folder Setup to Firstrun script.
+
 [B]Version 1.0.2[/B]
 Patch: Replaced ntp service restart with a ntpdate update.
 Updated: Tiny Repo.

@@ -1,0 +1,29 @@
+<settings>
+    <setting id="autoUpdate" value="false" />
+    <setting id="backup_addon_data" value="true" />
+    <setting id="backup_addons" value="true" />
+    <setting id="backup_config" value="true" />
+    <setting id="backup_custom_dir_1" value="" />
+    <setting id="backup_custom_dir_2" value="" />
+    <setting id="backup_database" value="true" />
+    <setting id="backup_playlists" value="true" />
+    <setting id="backup_profiles" value="false" />
+    <setting id="backup_rotation" value="0" />
+    <setting id="backup_thumbnails" value="true" />
+    <setting id="cVersion" value="1.0.0" />
+    <setting id="cron_schedule" value="0 0 * * *" />
+    <setting id="cron_shutdown" value="false" />
+    <setting id="custom_dir_1_enable" value="false" />
+    <setting id="custom_dir_2_enable" value="false" />
+    <setting id="dVersion" value="0.0.0" />
+    <setting id="day_of_week" value="0" />
+    <setting id="dropbox_key" value="" />
+    <setting id="dropbox_secret" value="" />
+    <setting id="enable_scheduler" value="true" />
+    <setting id="remote_path" value="/root/XBMCBackups/" />
+    <setting id="remote_path_2" value="" />
+    <setting id="remote_selection" value="0" />
+    <setting id="run_silent" value="false" />
+    <setting id="schedule_interval" value="1" />
+    <setting id="schedule_time" value="00:00" />
+</settings>
