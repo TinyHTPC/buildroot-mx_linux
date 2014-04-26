@@ -3,10 +3,10 @@
 ## Xbmc TinyOS Addon
 #
 ###############################################################################
-TINYOS_VERSION = 0.0.1
+TINYOS_VERSION = c1b6f3c4d7477f7d0b9d1f213cb7c5237e9c8795
 TINYOS_SOURCE=tinyos-$(TINYOS_VERSION).tar.gz
-TINYOS_SITE = ./package/thirdparty/tinyos/src
-TINYOS_SITE_METHOD = local
+TINYOS_SITE = git://github.com/TinyHTPC/linux-tinyos.git
+TINYOS_SITE_METHOD = git
 TINYOS_INSTALL_STAGING = NO
 TINYOS_INSTALL_TARGET = YES
 
@@ -15,4 +15,4 @@ define TINYOS_INSTALL_TARGET_CMDS
 	cp -rf $(@D)/* $(TARGET_DIR)/usr/share/xbmc/addons/
 endef
 
-$(eval $(call xbmc-addon,package/thirdparty/xbmcaddons,tinyos))
+$(eval $(call xbmc-addon,package/thirdparty,tinyos))

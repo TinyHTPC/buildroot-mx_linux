@@ -1,5 +1,5 @@
 config BR2_PACKAGE_XBMC_ADDON_TINYOS
     bool "TinyOS"
     help
-      Xbmc TinyOS Addon
+      Xbmc TinyOS Add-ons
 
