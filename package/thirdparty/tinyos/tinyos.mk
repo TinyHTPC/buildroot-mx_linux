@@ -3,7 +3,7 @@
 ## Xbmc TinyOS Addon
 #
 ###############################################################################
-TINYOS_VERSION = b5bb5b61f120963fe7ddadb5a6a61d50dc8f2cc9
+TINYOS_VERSION = 49f8ee07b2dedb1154f88bc3ff36a1f182051f6d
 TINYOS_SOURCE=tinyos-$(TINYOS_VERSION).tar.gz
 TINYOS_SITE = git://github.com/TinyHTPC/linux-tinyos.git
 TINYOS_SITE_METHOD = git
