@@ -1,9 +1,0 @@
-#!/bin/sh
-#
-# Start the network....
-#
-
-    
-# Tempoary patch to disable second wifi adapter.
-echo "stopping wlan1..."
-exec ifconfig wlan1 down
