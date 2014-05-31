@@ -1,10 +1,9 @@
 <advancedsettings>
   <hidebattery>1</hidebattery>
-  <hidegputemp>1</hidegputemp>
   <hidecpurev>1</hidecpurev>
   <hidecpuserial>1</hidecpuserial>
-  <hidecputemp>1</hidecputemp>
   <hidetotaluptime>1</hidetotaluptime>
+  <hidecputemp>1</hidecputemp>
   <showexitbutton>false</showexitbutton>
   <loglevel hide="false">2</loglevel>
 
@@ -13,38 +12,38 @@
     <minaudiocachelevel>50</minaudiocachelevel>
   </pvr>
 
-  <hidesettings>
-    <setting>videoplayer.rendermethod</setting>
-    <setting>videoplayer.adjustrefreshrate</setting>
-    <setting>videoplayer.pauseafterrefreshchange</setting>
-    <setting>videoplayer.usedisplayasclock</setting>
-    <setting>videoplayer.synctype</setting>
-    <setting>audiocds</setting>
-    <setting>videoscreen.vsync</setting>
-    <setting>videoscreen.testpattern</setting>
-    <setting>videoscreen.haslcd</setting>
-    <!-- <setting>videoscreen.screen</setting> -->
-    <setting>audiooutput.mode</setting>
-    <setting>audiooutput.channellayout</setting>
-    <setting>audiooutput.audiodevice</setting>
-    <setting>audiooutput.customdevice</setting>
-    <setting>audiooutput.passthroughdevice</setting>
-    <setting>audiooutput.custompassthrough</setting>
-    <setting>audiooutput.truehdpassthrough</setting>
-    <setting>audiooutput.dtshdpassthrough</setting>
-    <setting>input.remoteaskeyboard</setting>
-    <setting>powermanagement</setting>
-  </hidesettings>
-
   <video>
     <subsdelayrange>60</subsdelayrange>
     <audiodelayrange>60</audiodelayrange>
   </video>
 
   <network>
-    <!-- 144Mbit/s max network bandwidth -->
     <readbufferfactor>4.0</readbufferfactor>
-    <!-- Allow caching for all network streams -->
-    <alwaysforcebuffer>1</alwaysforcebuffer>
+    <buffermode>1</buffermode>
   </network>
+
+  <audiooutput>
+    <ac3passthrough>false</ac3passthrough>
+    <dtspassthrough>false</dtspassthrough>
+    <truehdpassthrough>false</truehdpassthrough>
+    <dtshdpassthrough>false</dtshdpassthrough>
+    <audiodevice>ALSA:@</audiodevice>
+    <channels>1</channels>
+    <config>2</config>
+  </audiooutput>
+
+  <videoscreen>
+    <blankdisplays>false</blankdisplays>
+    <vsync>2</vsync>
+  </videoscreen>
+
+  <input>
+    <enablesystemkeys>false</enablesystemkeys>
+    <remoteaskeyboard>true</remoteaskeyboard>
+  </input>
+
+  <powermanagement>
+    <shutdowntime>0</shutdowntime>
+    <shutdownstate>1</shutdownstate>
+  </powermanagement>
 </advancedsettings>

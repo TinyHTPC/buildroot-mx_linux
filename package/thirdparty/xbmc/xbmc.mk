@@ -4,9 +4,9 @@
 #
 #################################################################################
 
-XBMC_VERSION = dcaa33f394972a8e4763b34bd166cadec7825d5d
+XBMC_VERSION = 13.0-Gotham_r2
 XBMC_SITE_METHOD = git
-XBMC_SITE = git://github.com/CoreTech-Development/xbmc.git
+XBMC_SITE = git://github.com/xbmc/xbmc.git
 XBMC_INSTALL_STAGING = YES
 XBMC_INSTALL_TARGET = YES
 
@@ -17,10 +17,6 @@ XBMC_CONF_OPT += --enable-neon --enable-gles --disable-sdl --disable-x11 --disab
 
 ifeq ($(BR2_ARM_AMLOGIC),y)
 XBMC_CONF_OPT += --enable-codec=amcodec
-endif
-
-ifeq ($(BR2_BOARD_TYPE_AMLOGIC_M6),y)
-XBMC_CONF_OPT += --enable-m6
 endif
 
 ifeq ($(BR2_XBMC_POWERDOWN),y)
@@ -43,11 +39,6 @@ ifneq ($(BR2_CCACHE),y)
 XBMC_CONF_OPT += --disable-ccache
 endif
 
-ifeq ($(BR2_PACKAGE_OPENGL_API20),y)
-# Reference for apiv20... TODO:Test Compile
-# XBMC_EXTRA_LDFLAGS += --extra-ldflags="$LIBS -lUMP -lEGL -lGLESv2"
-endif
-
 XBMC_DEPENDENCIES += flac libmad libmpeg2 libogg \
   libsamplerate libtheora libvorbis wavpack bzip2 dbus libcdio \
   python lzo zlib libgcrypt openssl mysql_client sqlite fontconfig \
@@ -55,7 +46,7 @@ XBMC_DEPENDENCIES += flac libmad libmpeg2 libogg \
   libmicrohttpd libssh2 boost fribidi ncurses pcre libnfs afpfs-ng \
   libplist libshairport libbluray libcec \
   readline expat libxml2 yajl samba libass opengl libusb-compat \
-  avahi udev tinyxml taglib18 libssh
+  avahi udev tinyxml taglib18 libssh libxslt
 
 ifeq ($(BR2_ARM_AMLOGIC),y)
 XBMC_DEPENDENCIES += libamplayer
@@ -70,19 +61,15 @@ endif
 ifneq ($(BR2_XBMC_KEYMAP),"")
 XBMC_KEYMAP = package/thirdparty/xbmc/keymaps/$(call qstrip,$(BR2_XBMC_KEYMAP)).xml
 else
-XBMC_KEYMAP = package/thirdparty/xbmc/keymaps/keyboard.xml
+XBMC_KEYMAP = package/thirdparty/xbmc/keymaps/variant.keyboard.xml
 endif
 
 ifneq ($(BR2_XBMC_ADV_SETTINGS),"")
 XBMC_ADV_SETTINGS = package/thirdparty/xbmc/settings/$(call qstrip,$(BR2_XBMC_ADV_SETTINGS)).xml
+else ifeq ($(BR2_ARM_AMLOGIC),y)
+XBMC_ADV_SETTINGS = package/thirdparty/xbmc/settings/amlogic_advancedsettings.xml
 else
 XBMC_ADV_SETTINGS = package/thirdparty/xbmc/settings/advancedsettings.xml
-endif
-
-ifneq ($(BR2_XBMC_GUI_SETTINGS),"")
-XBMC_GUI_SETTINGS = package/thirdparty/xbmc/settings/$(call qstrip,$(BR2_XBMC_GUI_SETTINGS)).xml
-else
-XBMC_GUI_SETTINGS = package/thirdparty/xbmc/settings/guisettings.xml
 endif
 
 ifneq ($(BR2_XBMC_DEFAULT_SKIN),"")
@@ -147,7 +134,6 @@ endef
 
 define XBMC_INSTALL_SETTINGS
   cp -f $(XBMC_ADV_SETTINGS) $(TARGET_DIR)/usr/share/xbmc/system/advancedsettings.xml
-  cp -f $(XBMC_GUI_SETTINGS) $(TARGET_DIR)/usr/share/xbmc/system/guisettings.xml
 endef
 
 define XBMC_INSTALL_KEYMAP
@@ -161,7 +147,7 @@ define XBMC_INSTALL_REMOTE_CONF
 endef
 
 define XBMC_SET_DEFAULT_SKIN
-  sed -i '/#define DEFAULT_SKIN/c\#define DEFAULT_SKIN "$(XBMC_DEFAULT_SKIN)"' $(XBMC_DIR)/xbmc/settings/Settings.h
+  sed -i '/#define DEFAULT_SKIN/c\#define DEFAULT_SKIN          "$(XBMC_DEFAULT_SKIN)"' $(XBMC_DIR)/xbmc/system.h
 endef
 
 define XBMC_INSTALL_SPLASHS

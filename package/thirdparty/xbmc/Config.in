@@ -54,6 +54,7 @@ config BR2_PACKAGE_XBMC
 	select BR2_PACKAGE_READLINE
 	select BR2_PACKAGE_EXPAT
 	select BR2_PACKAGE_LIBXML2
+	select BR2_PACKAGE_LIBXSLT
 	select BR2_PACKAGE_YAJL
 	select BR2_PACKAGE_SAMBA
 	select BR2_PACKAGE_SAMBA_LIBSMBCLIENT
@@ -124,18 +125,6 @@ config BR2_XBMC_ADV_SETTINGS
 		- If this option is not set XBMC will use it's default advanced settings
 		- Selected configuration will be installed to "/usr/share/xbmc/system/advancedsettings.xml"
 		- Remote configuration should be located in "package/thirdparty/xbmc/settings"
-		- Compiler will append ".xml" to end of file name
-
-config BR2_XBMC_GUI_SETTINGS
-	string "GUI settings"
-	default ""
-	help
-	  This option will set the GUI settings to be used.
-
-	  NOTES:
-		- If this option is not set XBMC will use it's default GUI settings
-		- Selected keymap will be installed to "/usr/share/xbmc/system/guisettings.xml"
-		- Keymap should be located in "package/thirdparty/xbmc/settings"
 		- Compiler will append ".xml" to end of file name
 
 config BR2_XBMC_SPLASH
