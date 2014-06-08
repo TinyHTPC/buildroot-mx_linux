@@ -4,7 +4,7 @@
 #
 #################################################################################
 
-XBMC_VERSION = 13.0-Gotham_r2
+XBMC_VERSION = 13.1rc1-Gotham
 XBMC_SITE_METHOD = git
 XBMC_SITE = git://github.com/xbmc/xbmc.git
 XBMC_INSTALL_STAGING = YES
@@ -72,6 +72,10 @@ else
 XBMC_ADV_SETTINGS = package/thirdparty/xbmc/settings/advancedsettings.xml
 endif
 
+ifneq ($(BR2_XBMC_SETTINGS),"")
+XBMC_SETTINGS = package/thirdparty/xbmc/settings/$(call qstrip,$(BR2_XBMC_SETTINGS)).xml
+endif
+
 ifneq ($(BR2_XBMC_DEFAULT_SKIN),"")
 XBMC_DEFAULT_SKIN = skin.$(call qstrip,$(BR2_XBMC_DEFAULT_SKIN))
 else
@@ -134,6 +138,7 @@ endef
 
 define XBMC_INSTALL_SETTINGS
   cp -f $(XBMC_ADV_SETTINGS) $(TARGET_DIR)/usr/share/xbmc/system/advancedsettings.xml
+  cp -f $(XBMC_SETTINGS) $(TARGET_DIR)/usr/share/xbmc/system/settings/settings.xml
 endef
 
 define XBMC_INSTALL_KEYMAP
