@@ -111,8 +111,6 @@ alias usb:v0BDAp817Ed*dc*dsc*dp*ic*isc*ip* 8192cu
 alias usb:v0BDAp8170d*dc*dsc*dp*ic*isc*ip* 8192cu
 alias usb:v0BDAp8176d*dc*dsc*dp*ic*isc*ip* 8192cu
 alias usb:v0BDAp8191d*dc*dsc*dp*ic*isc*ip* 8192cu
-alias usb:v07B8p8179d*dc*dsc*dp*ic*isc*ip* 8188eu
-alias usb:v0BDAp0179d*dc*dsc*dp*ic*isc*ip* 8188eu
 alias usb:v0BDAp8179d*dc*dsc*dp*ic*isc*ip* 8188eu
 alias usb:v148Fp7601d*dc*dsc*dp*ic*isc*ip* mt7601Usta
 alias usb:v148Fp6370d*dc*dsc*dp*ic*isc*ip* mt7601Usta

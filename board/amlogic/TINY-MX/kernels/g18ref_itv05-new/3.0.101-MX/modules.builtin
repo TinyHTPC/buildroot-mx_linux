@@ -325,10 +325,14 @@ kernel/sound/core/snd-pcm.ko
 kernel/sound/core/snd-page-alloc.ko
 kernel/sound/core/snd-rawmidi.ko
 kernel/sound/soc/snd-soc-core.ko
+kernel/sound/soc/aml/snd-soc-aml-mixer.ko
 kernel/sound/soc/aml/snd-soc-aml-pcm.ko
 kernel/sound/soc/aml/snd-soc-aml-dai.ko
 kernel/sound/soc/aml/snd-soc-aml-hw.ko
 kernel/sound/soc/aml/aml_notify.ko
+kernel/sound/soc/aml/snd-soc-aml-platform.ko
+kernel/sound/soc/aml/snd-soc-aml-platform-pcm2bt.ko
+kernel/sound/soc/aml/snd-soc-aml-hw-pcm2bt.ko
 kernel/sound/soc/aml/snd-soc-aml-m6-rt5631.ko
 kernel/sound/soc/aml/snd-soc-aml-m-dummy.ko
 kernel/sound/soc/codecs/snd-soc-rt5631.ko

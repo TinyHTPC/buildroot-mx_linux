@@ -1,4 +1,4 @@
-kernel/crypto/michael_mic.ko
+kernel/crypto/ansi_cprng.ko
 kernel/drivers/video/backlight/lcd.ko
 kernel/drivers/char/hw_random/rng-core.ko
 kernel/drivers/scsi/scsi_wait_scan.ko
@@ -104,5 +104,6 @@ kernel/drivers/media/dvb/frontends/stv0367.ko
 kernel/drivers/media/dvb/frontends/cxd2820r.ko
 kernel/drivers/amlogic/wifi/rtl8xxx_CU/8192cu.ko
 kernel/drivers/amlogic/wifi/rtl8xxx_EU/8188eu.ko
-kernel/drivers/amlogic/ump/ump.ko
-kernel/drivers/amlogic/mali/mali.ko
+kernel/drivers/amlogic/wifi/mt7601u/mt7601Usta.ko
+kernel/drivers/amlogic/ump/apiv20/ump.ko
+kernel/drivers/amlogic/mali/apiv20/mali.ko
