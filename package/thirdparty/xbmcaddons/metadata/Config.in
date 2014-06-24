@@ -1,0 +1,6 @@
+config BR2_PACKAGE_XBMC_ADDON_METADATA
+    bool "script.metadata"
+    default n
+    help
+      With this script you can view meta information such as biography, birthday or filmography of an actor, director or writer. It's possible to show information about all movies even if they are not available in the local movie library.
+

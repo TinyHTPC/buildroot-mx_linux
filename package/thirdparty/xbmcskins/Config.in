@@ -1,4 +1,8 @@
 menu "XBMC skins"
     depends on BR2_PACKAGE_XBMC
 
+comment "XBMC skins"
+
+source "package/thirdparty/xbmcskins/tlbb/Config.in"
+
 endmenu

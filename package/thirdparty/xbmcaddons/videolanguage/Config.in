@@ -1,0 +1,6 @@
+config BR2_PACKAGE_XBMC_ADDON_VIDEOLANGUAGE
+    bool "script.videolanguge"
+    default n
+    help
+      This script makes it possible to show all audio and subtitle languages of a video file in the video info dialog.
+

@@ -1,0 +1,6 @@
+config BR2_PACKAGE_XBMC_ADDON_TLBBWIZARD
+    bool "plugin.video.tlbbwizard"
+    default n
+    help
+      TLBB quick addon packages installer
+

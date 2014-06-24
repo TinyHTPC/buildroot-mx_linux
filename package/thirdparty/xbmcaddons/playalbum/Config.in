@@ -1,0 +1,6 @@
+config BR2_PACKAGE_XBMC_ADDON_PLAYALBUM
+    bool "script.playalbum"
+    default n
+    help
+      Script will play a full album when executed in the album info dialog.
+

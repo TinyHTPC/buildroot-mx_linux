@@ -1,0 +1,3 @@
+config BR2_PACKAGE_XBMC_SKIN_TLBB
+depends on BR2_PACKAGE_XBMC
+        bool "TLBB"

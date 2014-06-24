@@ -1,0 +1,6 @@
+config BR2_PACKAGE_XBMC_ADDON_ARTISTSLIDESHOW
+    bool "script.artistslideshow"
+    default n
+    help
+      Download images and additional info of the currently playing artist
+

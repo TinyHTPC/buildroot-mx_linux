@@ -4,7 +4,7 @@
 #
 #################################################################################
 
-XBMC_VERSION = 13.1rc1-Gotham
+XBMC_VERSION = $(call qstrip,$(BR2_PACKAGE_XBMC_REV))
 XBMC_SITE_METHOD = git
 XBMC_SITE = git://github.com/xbmc/xbmc.git
 XBMC_INSTALL_STAGING = YES
@@ -64,16 +64,16 @@ else
 XBMC_KEYMAP = package/thirdparty/xbmc/keymaps/variant.keyboard.xml
 endif
 
+ifneq ($(BR2_XBMC_SETTINGS),"")
+XBMC_SETTINGS = package/thirdparty/xbmc/settings/$(call qstrip,$(BR2_XBMC_SETTINGS)).xml
+endif
+
 ifneq ($(BR2_XBMC_ADV_SETTINGS),"")
 XBMC_ADV_SETTINGS = package/thirdparty/xbmc/settings/$(call qstrip,$(BR2_XBMC_ADV_SETTINGS)).xml
 else ifeq ($(BR2_ARM_AMLOGIC),y)
 XBMC_ADV_SETTINGS = package/thirdparty/xbmc/settings/amlogic_advancedsettings.xml
 else
 XBMC_ADV_SETTINGS = package/thirdparty/xbmc/settings/advancedsettings.xml
-endif
-
-ifneq ($(BR2_XBMC_SETTINGS),"")
-XBMC_SETTINGS = package/thirdparty/xbmc/settings/$(call qstrip,$(BR2_XBMC_SETTINGS)).xml
 endif
 
 ifneq ($(BR2_XBMC_DEFAULT_SKIN),"")
@@ -137,8 +137,11 @@ define XBMC_INSTALL_ETC
 endef
 
 define XBMC_INSTALL_SETTINGS
-  cp -f $(XBMC_ADV_SETTINGS) $(TARGET_DIR)/usr/share/xbmc/system/advancedsettings.xml
   cp -f $(XBMC_SETTINGS) $(TARGET_DIR)/usr/share/xbmc/system/settings/settings.xml
+endef
+
+define XBMC_INSTALL_ADV_SETTINGS
+  cp -f $(XBMC_ADV_SETTINGS) $(TARGET_DIR)/usr/share/xbmc/system/advancedsettings.xml
 endef
 
 define XBMC_INSTALL_KEYMAP
@@ -193,12 +196,16 @@ endef
 XBMC_PRE_CONFIGURE_HOOKS += XBMC_SET_DEFAULT_SKIN
 XBMC_PRE_CONFIGURE_HOOKS += XBMC_BOOTSTRAP
 XBMC_POST_INSTALL_TARGET_HOOKS += XBMC_INSTALL_ETC
-XBMC_POST_INSTALL_TARGET_HOOKS += XBMC_INSTALL_SETTINGS
+XBMC_POST_INSTALL_TARGET_HOOKS += XBMC_INSTALL_ADV_SETTINGS
 XBMC_POST_INSTALL_TARGET_HOOKS += XBMC_INSTALL_KEYMAP
 XBMC_POST_INSTALL_TARGET_HOOKS += XBMC_INSTALL_SPLASHS
 XBMC_POST_INSTALL_TARGET_HOOKS += XBMC_CLEAN_UNUSED_ADDONS
 XBMC_POST_INSTALL_TARGET_HOOKS += XBMC_CLEAN_CONFLUENCE_SKIN
 XBMC_POST_INSTALL_TARGET_HOOKS += XBMC_INSTALL_REMOTE_CONF
+
+ifneq ($(BR2_XBMC_SETTINGS),"")
+XBMC_POST_INSTALL_TARGET_HOOKS += XBMC_INSTALL_SETTINGS
+endif
 
 ifneq ($(BR2_ENABLE_DEBUG),y)
 XBMC_POST_INSTALL_TARGET_HOOKS += XBMC_STRIP_BINARIES

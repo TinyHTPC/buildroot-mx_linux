@@ -1,0 +1,81 @@
+From 2a499d413b2096d050656db9270c9abe7ef57251 Mon Sep 17 00:00:00 2001
+From: j1nx <p.steenbergen@j1nx.nl>
+Date: Sat, 10 May 2014 21:26:31 +0200
+Subject: [PATCH] Add TLBB RF undefined remote keys
+
+Signed-off-by: j1nx <p.steenbergen@j1nx.nl>
+---
+ xbmc/input/XBMC_keysym.h     |  9 +++++++++
+ xbmc/input/XBMC_keytable.cpp | 12 ++++++++++++
+ xbmc/input/XBMC_vkeys.h      | 12 ++++++++++++
+ 3 files changed, 33 insertions(+)
+
+diff --git a/xbmc/input/XBMC_keysym.h b/xbmc/input/XBMC_keysym.h
+index dd184d8..33f57e8 100644
+--- a/xbmc/input/XBMC_keysym.h
++++ b/xbmc/input/XBMC_keysym.h
+@@ -230,6 +230,15 @@ typedef enum {
+   XBMCK_SHUFFLE           = 342,
+   XBMCK_FASTFORWARD       = 343,
+ 
++  XBMCK_RED		  = 350,
++  XBMCK_GREEN             = 351,
++  XBMCK_YELLOW            = 352,
++  XBMCK_BLUE              = 353,
++  XBMCK_MUSIC             = 354,
++  XBMCK_MOVIES            = 355,
++  XBMCK_SERIES            = 356,
++  XBMCK_SETTINGS          = 357,
++
+   XBMCK_LAST
+ } XBMCKey;
+ 
+diff --git a/xbmc/input/XBMC_keytable.cpp b/xbmc/input/XBMC_keytable.cpp
+index 4d07eb3..4d051ca 100644
+--- a/xbmc/input/XBMC_keytable.cpp
++++ b/xbmc/input/XBMC_keytable.cpp
+@@ -226,6 +226,18 @@ static const XBMCKEYTABLE XBMCKeyTable[] =
+ , { XBMCK_PRINT,                  0,    0, XBMCVK_PRINTSCREEN,   "printscreen" }
+ , { XBMCK_POWER,                  0,    0, XBMCVK_POWER,         "power" }
+ , { XBMCK_SLEEP,                  0,    0, XBMCVK_SLEEP,         "sleep" }
++
++, { XBMCK_RED,                    0,    0, XBMCVK_RED,           "red" }
++, { XBMCK_GREEN,                  0,    0, XBMCVK_GREEN,         "green" }
++, { XBMCK_YELLOW,                 0,    0, XBMCVK_YELLOW,        "yellow" }
++, { XBMCK_BLUE,                   0,    0, XBMCVK_BLUE,          "blue" }
++, { XBMCK_MUSIC,                  0,    0, XBMCVK_MUSIC,         "music" }
++, { XBMCK_MOVIES,                 0,    0, XBMCVK_MOVIES,        "movies" }
++, { XBMCK_SERIES,                 0,    0, XBMCVK_SERIES,        "series" }
++, { XBMCK_REWIND,                 0,    0, XBMCVK_REWIND,        "rewind" }
++, { XBMCK_HELP,                   0,    0, XBMCVK_HELP,          "help" }
++, { XBMCK_FASTFORWARD,            0,    0, XBMCVK_FASTFORWARD,   "fastforward" }
++, { XBMCK_SETTINGS,               0,    0, XBMCVK_SETTINGS,      "settings" }
+ };
+ 
+ static int XBMCKeyTableSize = sizeof(XBMCKeyTable)/sizeof(XBMCKEYTABLE);
+diff --git a/xbmc/input/XBMC_vkeys.h b/xbmc/input/XBMC_vkeys.h
+index 00437db..e6b616f 100644
+--- a/xbmc/input/XBMC_vkeys.h
++++ b/xbmc/input/XBMC_vkeys.h
+@@ -209,6 +209,18 @@ typedef enum {
+   XBMCVK_POWER          = 0XDE,
+   XBMCVK_SLEEP          = 0XDF,
+ 
++  XBMCVK_RED		= 0XE0,
++  XBMCVK_GREEN          = 0XE1,
++  XBMCVK_YELLOW         = 0XE2,
++  XBMCVK_BLUE           = 0XE3,
++  XBMCVK_REWIND         = 0XE4,
++  XBMCVK_HELP           = 0XE5,
++  XBMCVK_MUSIC          = 0XE6,
++  XBMCVK_MOVIES         = 0XE7,
++  XBMCVK_SERIES         = 0XE8,
++  XBMCVK_FASTFORWARD    = 0XE9,
++  XBMCVK_SETTINGS       = 0XEA,
++
+   XBMCVK_LAST           = 0xFF
+ } XBMCVKey;
+ 
+-- 
+1.9.1
+

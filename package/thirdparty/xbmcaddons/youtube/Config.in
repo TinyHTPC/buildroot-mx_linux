@@ -1,0 +1,6 @@
+config BR2_PACKAGE_XBMC_ADDON_YOUTUBE
+    bool "plugin.video.youtube"
+    default n
+    help
+      Youtube XBMC plugin
+

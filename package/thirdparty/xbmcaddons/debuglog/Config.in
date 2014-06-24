@@ -1,0 +1,6 @@
+config BR2_PACKAGE_XBMC_ADDON_DEBUGLOG
+    bool "script.xbmc.debug.log"
+    default n
+    help
+      Uploads your logs to xbmclogs.com
+

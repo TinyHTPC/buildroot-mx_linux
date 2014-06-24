@@ -1,0 +1,6 @@
+config BR2_PACKAGE_XBMC_ADDON_NEXTAIRED
+    bool "script.tv.show.next.aired"
+    default n
+    help
+      Get info for TV Shows Next Aired.
+

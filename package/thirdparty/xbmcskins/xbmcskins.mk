@@ -1,1 +1,1 @@
-#include */*.mk
+include package/thirdparty/xbmcskins/*/*.mk

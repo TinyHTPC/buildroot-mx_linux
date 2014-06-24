@@ -1,0 +1,6 @@
+config BR2_PACKAGE_XBMC_ADDON_MECHANIZE
+    bool "script.module.mechanize"
+    default n
+    help
+      Stateful programmatic web browsing in Python, after Andy Lester’s Perl module WWW::Mechanize.
+

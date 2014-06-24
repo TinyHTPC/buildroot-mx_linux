@@ -1,0 +1,6 @@
+config BR2_PACKAGE_XBMC_ADDON_EXTENDEDINFO
+    bool "script.extendedinfo"
+    default n
+    help
+      This script makes it possible to get additional info for lot of different media types.
+

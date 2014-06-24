@@ -1,0 +1,6 @@
+config BR2_PACKAGE_XBMC_ADDON_REQUESTS2
+    bool "script.module.requests2"
+    default n
+    help
+      Python HTTP for Humans
+

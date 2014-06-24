@@ -1,0 +1,6 @@
+config BR2_PACKAGE_XBMC_ADDON_HDTRAILERS_NET
+    bool "plugin.video.hdtrailers_net"
+    default n
+    help
+      Trailer and Clips from several sources in HD
+

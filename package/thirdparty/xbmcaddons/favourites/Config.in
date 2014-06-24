@@ -1,0 +1,6 @@
+config BR2_PACKAGE_XBMC_ADDON_FAVOURITES
+    bool "script.favourites"
+    default n
+    help
+      Fetches item from your xbmc favourites to populate Home menu/submenu with custom buttons.
+

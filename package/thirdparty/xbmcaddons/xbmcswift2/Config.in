@@ -1,0 +1,6 @@
+config BR2_PACKAGE_XBMC_ADDON_XBMCSWIFT2
+    bool "script.module.xbmcswift2"
+    default n
+    help
+      xbmcswift2 for addon development
+
