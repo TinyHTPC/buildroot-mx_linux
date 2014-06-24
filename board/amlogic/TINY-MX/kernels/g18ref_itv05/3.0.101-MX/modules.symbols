@@ -18,6 +18,8 @@ alias symbol:dib9000_set_gpio dib9000
 alias symbol:dib8000_set_gpio dib8000
 alias symbol:xc5000_attach xc5000
 alias symbol:lgs8gl5_attach lgs8gl5
+alias symbol:rausb_autopm_put_interface mt7601Usta
+alias symbol:rausb_autopm_get_interface mt7601Usta
 alias symbol:cxd2820r_attach cxd2820r
 alias symbol:hwrng_register rng_core
 alias symbol:zl10039_attach zl10039
