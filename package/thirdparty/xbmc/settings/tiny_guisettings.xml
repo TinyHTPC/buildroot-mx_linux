@@ -1,6 +1,6 @@
 <settings>
     <lookandfeel>
-        <enablerssfeeds>false</enablerssfeeds>
+        <enablerssfeeds>true</enablerssfeeds>
     </lookandfeel>
     <locale>
         <language>English</language>
