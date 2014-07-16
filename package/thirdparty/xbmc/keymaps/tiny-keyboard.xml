@@ -6,7 +6,7 @@
       <f1>XBMC.ActivateWindow(MyPictures)</f1>
       <f2>XBMC.ActivateWindow(MyMusic)</f2>
       <f3>XBMC.ActivateWindow(VideoLibrary)</f3>
-      <a>audionextlanguage</a>
+      <f6>audiodelay</f6>
     </keyboard>
   </global>
   <FullscreenVideo>
